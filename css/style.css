@@ -3,6 +3,18 @@
     padding: 0;
   }
   
+  html {
+  scroll-behavior: smooth;
+  background-color: rgb(255, 192, 0);
+}
+
+p{
+  display: flex;
+}
+
+main{
+  font-family: sans-serif;
+}
   a {
     font-family: sans-serif;
     text-decoration: none;
@@ -67,6 +79,37 @@
     transition: 0.3s;
   }
   
+.carousel {
+  overflow: hidden;
+  width: 300px; /* ajuste conforme necessário */
+}
+
+.carousel__track {
+  display: flex;
+  width: max-content;
+  animation: scroll 10s linear infinite;
+}
+
+.carousel:hover .carousel__track {
+  animation-play-state: paused;
+}
+
+.carousel__slide {
+  flex: 0 0 auto;
+  width: 300px; /* mesmo valor de .carousel */
+  /* adicione padding, margin, background, etc., conforme seu design */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* desliza até metade da track */
+  }
+}
+
+
   @media (max-width: 750px) {
     .hamburger {
       display: block;
@@ -79,7 +122,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: #a5c;
+      background: rgb(255, 192, 0);
       clip-path: circle(100px at 90% -15%);
       transition: 1s ease-out;
   
