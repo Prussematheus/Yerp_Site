@@ -12,8 +12,13 @@ p{
   display: flex;
 }
 
-main{
+h1{
+  text-align: center;
+}
+
+main {
   font-family: sans-serif;
+  padding-top: 80px; /* espaço para a navbar fixa */
 }
   a {
     font-family: sans-serif;
@@ -22,10 +27,16 @@ main{
     
   }
   
-  .header {
-    background: rgb(197, 2, 4);
-    padding-inline: 16px;
-  }
+ .header {
+  background: rgb(197, 2, 4);
+  padding-inline: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98%;
+  height: 70px;
+  z-index: 1000; /* acima de tudo */
+}
   
   .nav {
     max-width: 1280px;
