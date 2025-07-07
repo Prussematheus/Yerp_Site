@@ -1,102 +1,122 @@
+:root {
+  --cor-fundo: rgb(255, 192, 0);
+  --cor-header: rgb(197, 2, 4);
+  --cor-texto: #fff;
+  --cor-link: black;
+  --fonte-principal: 'Segoe UI', sans-serif;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
   scroll-behavior: smooth;
-  background-color: rgb(255, 192, 0);
+  background-color: var(--cor-fundo);
 }
 
-p{
-  display: flex;
+body {
+  font-family: var(--fonte-principal);
 }
 
-h1{
+p {
+  margin: 1em 0;
+  line-height: 1.6;
+}
+
+h1, h2, h5 {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 main {
-  font-family: sans-serif;
   padding-top: 80px; /* espaço para a navbar fixa */
 }
-  a {
-    font-family: sans-serif;
-    text-decoration: none;
-    color: #fff;
-    
-  }
 
-  .contato{
-    color: black;
-  }
+/* Links */
+a {
+  text-decoration: none;
+  color: var(--cor-texto);
+  transition: 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+#contato{
+  text-align: center;
+}
+
+.contato {
+  color: var(--cor-link);
+  font-weight: bold;
   
- .header {
-  background: rgb(197, 2, 4);
+}
+
+/* Header */
+.header {
+  background: var(--cor-header);
   padding-inline: 16px;
   position: fixed;
   top: 0;
   left: 0;
-  width: 98%;
+  width: 100%;
   height: 70px;
-  z-index: 1000; /* acima de tudo */
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
-  
-  .nav {
-    max-width: 1280px;
-    height: 70px;
-    margin-inline: auto;
-  
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  #logo{
-    margin-top: 7px;
-    width: 60px;
-    height: 60px;
-  }
 
-  .logo {
-    font-size: 48px;
-  }
+.nav {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
 
-  #Evolução{
-    text-align: center;
-  }
-  .nav-list {
-    display: flex;
-    gap: 32px;
-    list-style: none;
-  }
-  
-  .nav-list a {
-    font-size: 18px;
-    color: #fff;
-    padding-block: 16px;
-  }
-  
-  .hamburger {
-    display: none;
-    border: none;
-    background: none;
-    border-top: 3px solid #fff;
-    cursor: pointer;
-  }
-  
-  .hamburger::after,
-  .hamburger::before {
-    content: " ";
-    display: block;
-    width: 30px;
-    height: 3px;
-    background: #fff;
-    margin-top: 5px;
-    position: relative;
-    transition: 0.3s;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  margin-top: 7px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-list a {
+  font-size: 18px;
+  padding-block: 16px;
+}
+
+/* Botão Hamburguer */
+.hamburger {
+  display: none;
+  border: none;
+  background: none;
+  border-top: 3px solid #fff;
+  cursor: pointer;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+/* Carrossel */
 .carousel {
   overflow: hidden;
   width: 100%;
@@ -108,7 +128,6 @@ main {
 
 .carousel__track {
   display: flex;
-  flex-wrap: nowrap;
   width: fit-content;
   animation: scroll 30s linear infinite;
 }
@@ -119,19 +138,20 @@ main {
 
 .carousel__slide {
   flex: 0 0 auto;
-  min-width: clamp(200px, 30vw, 400px); /* Mínimo de 200px, ideal 30vw, máximo 400px */
+  min-width: clamp(200px, 30vw, 400px);
   padding: 0 12px;
 }
 
 .carousel__slide img {
   width: 100%;
-  height: clamp(120px, 20vw, 240px); /* Ajusta altura proporcionalmente */
+  height: clamp(120px, 20vw, 240px);
   object-fit: cover;
   border-radius: 8px;
-  display: block;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: block;
 }
 
+/* Animação do carrossel */
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -141,72 +161,71 @@ main {
   }
 }
 
-
-  @media (max-width: 750px) {
-    .hamburger {
-      display: block;
-      z-index: 1;
-    }
-  
-    .nav-list {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgb(255, 192, 0);
-      clip-path: circle(100px at 90% -15%);
-      transition: 1s ease-out;
-  
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      gap: 0;
-  
-      pointer-events: none;
-    }
-  
-    .nav-list a {
-      font-size: 24px;
-      opacity: 0;
-    }
-  
-    .nav-list li:nth-child(1) a {
-      transition: 0.5s 0.2s;
-    }
-  
-    .nav-list li:nth-child(2) a {
-      transition: 0.5s 0.4s;
-    }
-  
-    .nav-list li:nth-child(3) a {
-      transition: 0.5s 0.6s;
-    }
-  
-    /* Estilos ativos */
-  
-    .nav.active .nav-list {
-      clip-path: circle(1500px at 90% -15%);
-      pointer-events: all;
-    }
-  
-    .nav.active .nav-list a {
-      opacity: 1;
-    }
-  
-    .nav.active .hamburger {
-      position: fixed;
-      top: 26px;
-      right: 16px;
-      border-top-color: transparent;
-    }
-  
-    .nav.active .hamburger::before {
-      transform: rotate(135deg);
-    }
-  
-    .nav.active .hamburger::after {
-      transform: rotate(-135deg);
-      top: -7px;
-    }
+/* Responsividade */
+@media (max-width: 750px) {
+  .hamburger {
+    display: block;
+    z-index: 2;
   }
+
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--cor-fundo);
+    clip-path: circle(100px at 90% -15%);
+    transition: 1s ease-out;
+
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+
+    pointer-events: none;
+  }
+
+  .nav-list a {
+    font-size: 24px;
+    opacity: 0;
+  }
+
+  .nav-list li:nth-child(1) a {
+    transition: 0.5s 0.2s;
+  }
+
+  .nav-list li:nth-child(2) a {
+    transition: 0.5s 0.4s;
+  }
+
+  .nav-list li:nth-child(3) a {
+    transition: 0.5s 0.6s;
+  }
+
+  /* Ativo */
+  .nav.active .nav-list {
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all;
+  }
+
+  .nav.active .nav-list a {
+    opacity: 1;
+  }
+
+  .nav.active .hamburger {
+    position: fixed;
+    top: 26px;
+    right: 16px;
+    border-top-color: transparent;
+  }
+
+  .nav.active .hamburger::before {
+    transform: rotate(135deg);
+  }
+
+  .nav.active .hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
