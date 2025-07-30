@@ -5,100 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yerp Bomboniere</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script defer src="script/script.js"></script>
-  </head>
   <body>
     <header class="header">
       <nav class="nav">
-        <a href="/" class="logo"><img id="logo" src="images/LOGO-YERP.png"></a>
+        <a href="/" class="logo"><img id="logo" src="images/LOGO-YERP.png" /></a>
         <button class="hamburger"></button>
         <ul class="nav-list">
           <li><a href="#História">História</a></li>
-          <li><a href="#produtos">Alguns Produtos</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Produtos</a>
+            <ul class="dropdown-content">
+              <li><a href="#guloseimas">Guloseimas</a></li>
+              <li><a href="#baloes">Arranjos de Balões</a></li>
+              <li><a href="#cestas">Cestas</a></li>
+              <li><a href="#diversos">Diversos</a></li>
+            </ul>
+          </li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
     </header>
+
     <main>
-       <section id="História">
+      <section id="História">
         <h1>A Nossa História</h1>
- <div class="carousel">
-  <div class="carousel__track">
-    <div class="carousel__slide"><img src="images/Loja/yerp1.jpeg"></div>
-    <div class="carousel__slide"><img src="images/Loja/yerp2.jpeg"></div>
-    <div class="carousel__slide"><img src="images/Loja/yerp3.jpeg"></div>
-    <!-- repete os slides para criar o loop -->
-    <div class="carousel__slide"><img src="images/Loja/yerp1.jpeg"></div>
-    <div class="carousel__slide"><img src="images/Loja/yerp2.jpeg"></div>
-    <div class="carousel__slide"><img src="images/Loja/yerp3.jpeg"></div>
-  </div>
-  <h5 id="Evolução"> Evolução da Yerp ao longo dos Anos</h5>
-</div>
+        <div class="carousel">
+          <div class="carousel__track">
+            <div class="carousel__slide"><img src="images/Loja/yerp1.jpeg" /></div>
+            <div class="carousel__slide"><img src="images/Loja/yerp2.jpeg" /></div>
+            <div class="carousel__slide"><img src="images/Loja/yerp3.jpeg" /></div>
+            <div class="carousel__slide"><img src="images/Loja/yerp1.jpeg" /></div>
+            <div class="carousel__slide"><img src="images/Loja/yerp2.jpeg" /></div>
+            <div class="carousel__slide"><img src="images/Loja/yerp3.jpeg" /></div>
+          </div>
+          <h5 id="Evolução">Evolução da Yerp ao longo dos Anos</h5>
+        </div>
+        <p>
+          No dia 03 de maio de 1996, nasce a Yerp Bomboniere, o cantinho mais doce da cidade. Nascido de um sonho familiar, com o objetivo de oferecer a mais nova opção no mercado de balas, doces, guloseimas, produtos descartáveis, artigos para festas infantis, pequenas empresas confeitaria e chocolate caseiro. Com uma atuação séria, em um mercado competitivo, a mesma vem se destacando, e tem alcançado bons resultados, através da fidelização de seus clientes, visando sempre à qualidade nos serviços prestados.
+        </p>
+      </section>
 
-    <p>
-      No dia 03 de maio de 1996 , nasce a Yerp Bomboniere, o cantinho mais doce da cidade. Nascido de um sonho familiar , com o objetivo de oferecer a mais nova opção no mercado de balas, doces, guloseimas, produtos descartáveis, artigos para festas infantis, pequenas empresas confeitaria e chocolate caseiro. Com uma atuação séria, em um mercado competitivo, a mesma vem se destacando, e tem alcançado bons resultados, através da fidelização de seus clientes, visando sempre à qualidade nos serviços prestados.
-    </p>
-  </section>
+      <section id="produtos">
+        <h2>Alguns de nossos produtos!</h2>
 
-  <section id="produtos">
-    <h2>Alguns de nossos produtos!</h2>
-     <div class="carousel">
-  <div class="carousel__track">
-    <div class="carousel__slide"><img src="images/Guloseimas/IMG-20250630-WA0024.jpg"></div>
-    <div class="carousel__slide"><img src="images/Guloseimas/IMG-20250630-WA0025.jpg"></div>
-    <div class="carousel__slide"><img src="images/Guloseimas/IMG-20250630-WA0026.jpg"></div>
-    <!-- repete os slides para criar o loop -->
-    <div class="carousel__slide"><img src="images/Guloseimas/IMG-20250630-WA0024.jpg"></div>
-    <div class="carousel__slide"><img src="images/Guloseimas/IMG-20250630-WA0025.jpg"></div>
-    <div class="carousel__slide"><img src="images/Guloseimas/IMG-20250630-WA0026.jpg"></div>
-  </div>
-      <div class="carousel">
-  <div class="carousel__track">
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0010.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0011.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0012.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0013.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0014.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0015.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0016.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0017.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0018.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0019.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0020.jpg"></div>
-    <!-- repete os slides para criar o loop -->
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0010.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0011.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0012.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0013.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0014.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0015.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0016.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0017.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0018.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0019.jpg"></div>
-    <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0020.jpg"></div>
-  </div>
+        <!-- Guloseimas -->
+        <div id="guloseimas" class="carousel">
+          <div class="carousel__track">
+            <div class="carousel__slide"><img src="images/Guloseimas/IMG-20250630-WA0024.jpg" /></div>
+            <div class="carousel__slide"><img src="images/Guloseimas/IMG-20250630-WA0025.jpg" /></div>
+            <div class="carousel__slide"><img src="images/Guloseimas/IMG-20250630-WA0026.jpg" /></div>
+            <div class="carousel__slide"><img src="images/Guloseimas/IMG-20250630-WA0024.jpg" /></div>
+            <div class="carousel__slide"><img src="images/Guloseimas/IMG-20250630-WA0025.jpg" /></div>
+            <div class="carousel__slide"><img src="images/Guloseimas/IMG-20250630-WA0026.jpg" /></div>
+          </div>
+        </div>
 
-   <div class="carousel">
-  <div class="carousel__track">
-    <div class="carousel__slide"><img src="images/Cestas/IMG-20250630-WA0022.jpg"></div>
-    <div class="carousel__slide"><img src="images/Cestas/IMG-20250630-WA0023.jpg"></div>
-    <div class="carousel__slide"><img src="images/Cestas/IMG-20250630-WA0027.jpg"></div>
-    <div class="carousel__slide"><img src="images/Cestas/IMG-20250630-WA0028.jpg"></div>
-        <!-- repete os slides para criar o loop -->
-    <div class="carousel__slide"><img src="images/Cestas/IMG-20250630-WA0022.jpg"></div>
-    <div class="carousel__slide"><img src="images/Cestas/IMG-20250630-WA0023.jpg"></div>
-    <div class="carousel__slide"><img src="images/Cestas/IMG-20250630-WA0027.jpg"></div>
-    <div class="carousel__slide"><img src="images/Cestas/IMG-20250630-WA0028.jpg"></div>
-  </div>
+        <!-- Balões -->
+        <div id="baloes" class="carousel">
+          <div class="carousel__track">
+            <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0010.jpg" /></div>
+            <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0011.jpg" /></div>
+            <div class="carousel__slide"><img src="images/Arranjos de Balão/IMG-20250630-WA0012.jpg" /></div>
+            <!-- Adicione os demais slides aqui -->
+          </div>
+        </div>
 
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>Entre em contato conosco através do </p><br> 
-    <a class="contato" href="https://api.whatsapp.com/send?phone=554734551933">Whatsapp</a> <br><br>
-    <a class="contato" href="https://www.instagram.com/yerp_bomboniere/">Instagram</a>
-  </section>
+        <!-- Cestas -->
+        <div id="cestas" class="carousel">
+          <div class="carousel__track">
+            <div class="carousel__slide"><img src="images/Cestas/IMG-20250630-WA0022.jpg" /></div>
+            <div class="carousel__slide"><img src="images/Cestas/IMG-20250630-WA0023.jpg" /></div>
+            <div class="carousel__slide"><img src="images/Cestas/IMG-20250630-WA0027.jpg" /></div>
+            <div class="carousel__slide"><img src="images/Cestas/IMG-20250630-WA0028.jpg" /></div>
+            <div class="carousel__slide"><img src="images/Cestas/IMG-20250630-WA0022.jpg" /></div>
+            <div class="carousel__slide"><img src="images/Cestas/IMG-20250630-WA0023.jpg" /></div>
+            <div class="carousel__slide"><img src="images/Cestas/IMG-20250630-WA0027.jpg" /></div>
+            <div class="carousel__slide"><img src="images/Cestas/IMG-20250630-WA0028.jpg" /></div>
+          </div>
+        </div>
+        <!-- Guloseimas -->
+        <div id="guloseimas" class="carousel">
+          <div class="carousel__track">
+            <div class="carousel__slide"><img src="images/Guloseimas/IMG-20250630-WA0024.jpg" /></div>
+            <div class="carousel__slide"><img src="images/Guloseimas/IMG-20250630-WA0025.jpg" /></div>
+            <div class="carousel__slide"><img src="images/Guloseimas/IMG-20250630-WA0026.jpg" /></div>
+            <div class="carousel__slide"><img src="images/Guloseimas/IMG-20250630-WA0024.jpg" /></div>
+            <div class="carousel__slide"><img src="images/Guloseimas/IMG-20250630-WA0025.jpg" /></div>
+            <div class="carousel__slide"><img src="images/Guloseimas/IMG-20250630-WA0026.jpg" /></div>
+          </div>
+        </div>
+        
+      </section>
 
+      <section id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco através do</p>
+        <br />
+        <a class="contato" href="https://api.whatsapp.com/send?phone=554734551933">Whatsapp</a>
+        <br /><br />
+        <a class="contato" href="https://www.instagram.com/yerp_bomboniere/">Instagram</a>
+      </section>
     </main>
   </body>
 </html>
