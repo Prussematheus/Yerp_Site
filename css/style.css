@@ -24,9 +24,11 @@ body {
 p {
   margin: 1em 0;
   line-height: 1.6;
+  padding: 40px;
+  justify-content: center;
 }
 
-h1, h2, h5 {
+h1, h2, h3, h5 {
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -50,9 +52,15 @@ a:hover {
   text-align: center;
 }
 
+#contato_dev {
+  color: var(--cor-link);
+  text-decoration: underline;
+}
+
 .contato {
   color: var(--cor-link);
   font-weight: bold;
+  text-decoration: underline;
   
 }
 
@@ -144,12 +152,16 @@ a:hover {
 
 .carousel__slide img {
   width: 100%;
-  height: clamp(120px, 20vw, 240px);
-  object-fit: cover;
+  height: clamp(200px, 30vw, 400px); /* Altura maior para caber a logo */
+  object-fit: contain;               /* Mostra a imagem inteira sem cortes */
+
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   display: block;
 }
+
+
+
 
     /* Estilo do Dropdown */
       .dropdown {
